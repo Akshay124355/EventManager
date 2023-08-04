@@ -97,9 +97,6 @@ const EventData = () => {
                             )
                         }))}
                 </table>
-                {/* {result.length==undefined ? (
-                    <h1>Please add event</h1>
-                ) : ""} */}
             </div>
         </div>
     )

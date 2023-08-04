@@ -3,8 +3,7 @@ import "./style.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { addEvent, updateEvent } from '../../redux/actions/reducerActions';
 import { useLocation } from "react-router-dom";
-// import Swal from 'sweetalert2'
-// const Swal = require('sweetalert2');
+;
 
 const EventForm = () => {
     const dispatch = useDispatch()
@@ -24,7 +23,6 @@ const EventForm = () => {
         eventOrganisation: '',
         totalSubEvents: 0,
     });
-    const [successMessage, setSuccessMessage] = useState(false)
 
     useEffect(() => {
         if (editData) return setFormData(editData);
@@ -108,30 +106,20 @@ const EventForm = () => {
             dispatch(addEvent(formData))
         } else {
             dispatch(updateEvent(formData))
-            setSuccessMessage(true)
         }
         // Clear fields
         setFormData(initialFormData)
     }
 
-    // const sweetAlert = () => {
-
-    //     MySwal.fire({
-    //         title: <strong>Good job!</strong>,
-    //         html: <i>You clicked the button!</i>,
-    //         icon: 'success'
-    //     })
-    // }
     return (
         <div>
             <div class="main-container">
                 <div className="sub-container">
-                    { }
                     <form onSubmit={handleSubmit}>
                         {formList.map((element, index) => {
                             return (
                                 <div className="form-container">
-                                    <div className="form__fields" key={index}>
+                                    <div className="form-fields" key={index}>
                                         <label>{element.label}:</label>
                                         {element.type === "textarea" ? (
                                             <textarea cols="30" rows="8"

@@ -3,7 +3,6 @@ import { Link, Outlet } from 'react-router-dom'
 import "./home.scss"
 
 const Home = () => {
-    // console.log("window",window.location)
     return (
         <div className="header-style-wrapper">
             <div className="header-container">
