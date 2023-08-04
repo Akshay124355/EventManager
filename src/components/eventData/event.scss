@@ -1,0 +1,47 @@
+.event-data-wrapper {
+    padding: 64px 0px;
+    .data-container {
+        max-width: 1000px;
+        margin: auto;
+
+        table {
+            tr {
+                width: 36px;
+                text-align: center;
+                padding: 12px 0px;
+                border: none;
+            }
+            th,
+            td {
+                border: 1px solid rgb(202, 202, 202);
+                padding: 12px 0px;
+                width: 100px;
+            }
+            th {
+                background: rgb(230, 228, 228);
+            }
+        }
+        .edit-icons {
+            font-size: 1.8rem;
+            color: green;
+            cursor: pointer;
+        }
+        .delete-icons {
+            font-size: 1.8rem;
+            color: rgb(229, 22, 22);
+            cursor: pointer;
+        }
+        .select-container {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            .select-box{
+                width: 200px;
+            }
+            h4{
+                padding: 20px;
+
+            }
+        }
+    }
+}

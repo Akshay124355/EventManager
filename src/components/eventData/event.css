@@ -1,0 +1,43 @@
+.event-data-wrapper {
+  padding: 64px 0px;
+}
+.event-data-wrapper .data-container {
+  max-width: 1000px;
+  margin: auto;
+}
+.event-data-wrapper .data-container table tr {
+  width: 36px;
+  text-align: center;
+  padding: 12px 0px;
+  border: none;
+}
+.event-data-wrapper .data-container table th,
+.event-data-wrapper .data-container table td {
+  border: 1px solid rgb(202, 202, 202);
+  padding: 12px 0px;
+  width: 100px;
+}
+.event-data-wrapper .data-container table th {
+  background: rgb(230, 228, 228);
+}
+.event-data-wrapper .data-container .edit-icons {
+  font-size: 1.8rem;
+  color: green;
+  cursor: pointer;
+}
+.event-data-wrapper .data-container .delete-icons {
+  font-size: 1.8rem;
+  color: rgb(229, 22, 22);
+  cursor: pointer;
+}
+.event-data-wrapper .data-container .select-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.event-data-wrapper .data-container .select-container .select-box {
+  width: 200px;
+}
+.event-data-wrapper .data-container .select-container h4 {
+  padding: 20px;
+}/*# sourceMappingURL=event.css.map */

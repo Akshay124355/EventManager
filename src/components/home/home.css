@@ -1,0 +1,49 @@
+.header-style-wrapper .header-container {
+  width: 100%;
+}
+.header-style-wrapper .header-container .title {
+  width: 100%;
+  background: #1fb2a6;
+  padding: 32px 0px;
+}
+.header-style-wrapper .header-container .title h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+.header-style-wrapper .header-container .header-tabs {
+  width: 100%;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
+  display: flex;
+}
+.header-style-wrapper .header-container .header-tabs .event-data,
+.header-style-wrapper .header-container .header-tabs .event-form {
+  width: 50%;
+  padding: 16px 0px;
+}
+.header-style-wrapper .header-container .header-tabs .event-data h4,
+.header-style-wrapper .header-container .header-tabs .event-form h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: gray;
+}
+.header-style-wrapper .header-container .header-tabs .event-data {
+  border-right: 1px solid gray;
+}
+.header-style-wrapper .header-container .header-tabs .event-data:hover h4,
+.header-style-wrapper .header-container .header-tabs .event-form:hover h4 {
+  color: #000000;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header-style-wrapper .header-container .header-tabs .active-tab:active {
+  border: 2px solid #1fb2a6;
+}
+.header-style-wrapper .header-container .header-tabs .active-tab:active h4 {
+  color: #000000;
+}
+.header-style-wrapper .header-container .header-tabs .link {
+  text-decoration: none;
+}/*# sourceMappingURL=home.css.map */
