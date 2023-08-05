@@ -40,4 +40,9 @@
 }
 .event-data-wrapper .data-container .select-container h4 {
   padding: 20px;
+}
+.event-data-wrapper .data-container h2 {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=event.css.map */

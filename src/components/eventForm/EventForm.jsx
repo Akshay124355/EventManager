@@ -3,7 +3,7 @@ import "./style.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { addEvent, updateEvent } from '../../redux/actions/reducerActions';
 import { useLocation } from "react-router-dom";
-;
+
 
 const EventForm = () => {
     const dispatch = useDispatch()
@@ -113,51 +113,59 @@ const EventForm = () => {
 
     return (
         <div>
-            <div class="main-container">
+            <div className="main-container">
                 <div className="sub-container">
                     <form onSubmit={handleSubmit}>
-                        {formList.map((element, index) => {
-                            return (
-                                <div className="form-container">
-                                    <div className="form-fields" key={index}>
-                                        <label>{element.label}:</label>
-                                        {element.type === "textarea" ? (
-                                            <textarea cols="30" rows="8"
-                                                required
-                                                value={formData[element.name]}
-                                                onChange={(e) => handleInput(e, element.name)}>
-                                            </textarea>
-                                        ) : element.type === "select" ? (
-                                            <select
-                                                name={element.name}
-                                                onChange={(e) => handleInput(e, element.name)}>
-                                                {element.options.map((option) => (
-                                                    <option key={option} value={option}>
-                                                        {option}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        ) : (
+                        {formList.map((element, index) => (
+                            <div className="form-container" key={index}>
+                                <div className="form-fields">
+                                    <label>{element.label}:</label>
+                                    {element.name === 'eventStartDate' || element.name === 'eventEndDate' ? (
+                                        <div className="date-inputs">
                                             <input
                                                 type={element.type}
                                                 onChange={(e) => handleInput(e, element.name)}
                                                 value={formData[element.name]}
-                                                placeholder={element.placeholder}
                                                 required
                                             />
-                                        )}
-                                    </div>
+                                        </div>
+                                    ) : element.type === 'textarea' ? (
+                                        <textarea
+                                            cols="30"
+                                            rows="6"
+                                            required
+                                            value={formData[element.name]}
+                                            onChange={(e) => handleInput(e, element.name)}
+                                        ></textarea>
+                                    ) : element.type === 'select' ? (
+                                        <select name={element.name} onChange={(e) => handleInput(e, element.name)}>
+                                            {element.options.map((option) => (
+                                                <option key={option} value={option}>
+                                                    {option}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    ) : (
+                                        <input
+                                            type={element.type}
+                                            onChange={(e) => handleInput(e, element.name)}
+                                            value={formData[element.name]}
+                                            placeholder={element.placeholder}
+                                            required
+                                        />
+                                    )}
                                 </div>
-                            )
-                        })}
+                            </div>
+                        ))}
                         <div className="save__btn">
-                            <button type="submit" class="savebtn">Save</button>
+                            <button type="submit" className="savebtn">
+                                Save
+                            </button>
                         </div>
                     </form>
                 </div>
-            </div >
-        </div >
-    )
-}
-
+            </div>
+        </div>
+    );
+};
 export default EventForm;

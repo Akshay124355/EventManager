@@ -5,34 +5,68 @@
 }
 .main-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  .sub-container {
-    width: 45%;
-    margin: 4rem 0rem;
-    padding: 2rem 0rem;
-    display: flex;
-    justify-content: center;
-    background: #abb0b1;
-    border-radius: 1rem;
-  }
-}
-input,
-select,
-textarea,
-button {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  outline: none;
-  background: #f1f1f1;
-  border-radius: 0.5rem;
+  align-items: center;
+  height: 100vh;
 }
 
-button {
-  cursor: pointer;
+.sub-container {
+  background-color: rgb(230, 228, 228);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 250px;
 }
-button:hover {
-  background: #1fb2a6;
+
+.form-container {
+  border-bottom: 1px solid #b0aaaa;
+  padding: 5px 0;
+}
+
+.form-fields {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-fields label {
+  min-width: 150px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="number"],
+.form-fields input[type="date"],
+.form-fields select,
+.form-fields textarea {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-fields textarea {
+  resize: vertical;
+}
+
+.save__btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.savebtn {
+  background-color: rgb(9, 168, 168);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.savebtn:hover {
+  background-color: rgb(5, 121, 121);
 }

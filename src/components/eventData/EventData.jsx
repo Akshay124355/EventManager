@@ -14,6 +14,8 @@ const EventData = () => {
     let result = useSelector((state) => state.eventReducer);
     const eventType = ['All', 'sports', 'music', 'general', 'children', 'school']
 
+    // let get = Object.keys(result.events).length
+    // console.log(, "ressss");
     const handleSelect = (data) => {
         setSelectBox(data.target.value)
         dispatch(filterEvents(data.target.value));
@@ -97,6 +99,12 @@ const EventData = () => {
                             )
                         }))}
                 </table>
+                {result.events.length === 0 ? (
+                    <>
+                        <h2 className='heading'>Please add the event</h2>
+                    </>
+                ) : ""
+                }
             </div>
         </div>
     )
